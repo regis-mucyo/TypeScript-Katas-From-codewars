@@ -1,11 +1,11 @@
 // Exercise:
 //Given the data, define the interface "User" and use it accordingly.
 
-export type User = {
+export interface User {
   name: string;
   age: number;
   occupation: string;
-};
+}
 
 export const users: User[] = [
   {
