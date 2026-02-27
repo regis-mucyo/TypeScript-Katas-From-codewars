@@ -24,7 +24,7 @@ var Person = /** @class */ (function () {
         return "".concat(this.firstName, " ").concat(this.secondName);
     };
     Person.prototype.describe = function () {
-        return "This is ".concat(this.firstName, " ").concat(this.secondName);
+        return "This is ".concat(this.firstName, " ").concat(this.secondName, " ");
     };
     return Person;
 }());
@@ -35,8 +35,12 @@ var Employee = /** @class */ (function (_super) {
         _this.jobTitle = jobTitle;
         return _this;
     }
+    Employee.prototype.describe = function () {
+        return "I'm a ".concat(this.jobTitle, ".");
+    };
     return Employee;
 }(Person));
 var employee = new Employee("Regis", "Mucyo", "Full-stack Developer");
 console.log(employee.getFullName());
 console.log(employee.describe());
+// Method overriding...

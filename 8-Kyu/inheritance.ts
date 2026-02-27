@@ -11,7 +11,7 @@ class Person {
     return `${this.firstName} ${this.secondName}`;
   }
   describe(): string {
-    return `This is ${this.firstName} ${this.secondName}`;
+    return `This is ${this.firstName} ${this.secondName} `;
   }
 }
 
@@ -22,6 +22,9 @@ class Employee extends Person {
     private jobTitle: string,
   ) {
     super(firstName, secondName);
+  }
+  describe(): string {
+    return super.describe() + `I'm a ${this.jobTitle}.`;
   }
 }
 let employee = new Employee("Regis", "Mucyo", "Full-stack Developer");
